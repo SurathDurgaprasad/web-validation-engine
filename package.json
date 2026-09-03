@@ -1,6 +1,6 @@
 {
   "name": "web-validation-engine",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A configurable Playwright-based web validation engine for crawling web applications and detecting broken links, redirects, invalid anchors, and soft-404 responses.",
   "main": "crawler.js",
   "license": "MIT",
