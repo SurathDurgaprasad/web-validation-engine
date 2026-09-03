@@ -106,7 +106,7 @@ function validateSection(value, fieldName) {
  * nothing in this file, or anywhere it feeds into, names a specific product
  * or website. See config/config.json for the generic default and
  * config/examples/ for sample targets (including the historical Eggplant
- * Software documentation run referenced in PROJECT_AUDIT.md).
+ * Software documentation run referenced in docs/PROJECT_AUDIT.md).
  *
  * Every field here either falls back to a documented default when omitted,
  * or throws a specific, field-identified error when present but invalid.

@@ -75,7 +75,7 @@ function classifyUrl(targetUrl, sourceUrl, config) {
 /**
  * Two distinct dedup semantics live side by side in this crawler, and
  * conflating them was the root cause of a real bug (see
- * FINAL_HARDENING_REPORT.md): crawl identity (has this *page* been visited?)
+ * docs/FINAL_HARDENING_REPORT.md): crawl identity (has this *page* been visited?)
  * is fragment-insensitive by design — `/page#a` and `/page#b` are the same
  * page to crawl once. Link-validation identity is not — `#a` and `#b` are
  * two different anchor targets that must be validated independently.

@@ -37,7 +37,7 @@ function isInternalUrl(url, allowedDomains) {
     // ["example.com"] would also treat "notexample.com",
     // "example.com.attacker.net", and "myexample.com" as internal, which
     // both breaks crawl-scope containment and widens what gets treated as
-    // "safe to browser-escalate". See FINAL_HARDENING_REPORT.md.
+    // "safe to browser-escalate". See docs/FINAL_HARDENING_REPORT.md.
     return allowedDomains.some(domain => {
       const d = String(domain).toLowerCase();
       return hostname === d || hostname.endsWith(`.${d}`);

@@ -35,7 +35,7 @@ test('HttpValidator', async (t) => {
     // axios auto-follows redirects, so the terminal response.status here is
     // 200 — this is exactly the case the original implementation got wrong
     // (checking status>=300&&<400 would never fire once axios has followed
-    // the redirect). See ENGINEERING_REPORT.md.
+    // the redirect). See docs/ENGINEERING_REPORT.md.
     const result = await validator.validate(`${base}/redirect`);
     assert.equal(result.statusCode, 200);
     assert.equal(result.isRedirect, true);

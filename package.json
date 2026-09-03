@@ -1,8 +1,19 @@
 {
-  "name": "enterprise-doc-validator",
+  "name": "web-validation-engine",
   "version": "2.0.0",
-  "description": "Generic enterprise web/application crawler and link validation platform",
+  "description": "A configurable Playwright-based web validation engine for crawling web applications and detecting broken links, redirects, invalid anchors, and soft-404 responses.",
   "main": "crawler.js",
+  "license": "MIT",
+  "keywords": [
+    "playwright",
+    "web-validation",
+    "web-crawler",
+    "link-checker",
+    "website-testing",
+    "qa-automation",
+    "test-automation",
+    "nodejs"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },

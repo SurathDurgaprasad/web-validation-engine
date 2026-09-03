@@ -183,7 +183,7 @@ class ExcelReporter {
   }
 
   // "Result" never collapses "not checked" into "OK" — see
-  // ENGINEERING_REPORT.md, Principle 4 (never represent "not validated" as "valid").
+  // docs/ENGINEERING_REPORT.md, Principle 4 (never represent "not validated" as "valid").
   resultLabel(link) {
     switch (link.validationStatus) {
       case 'not_checked': return 'Not Checked';

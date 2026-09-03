@@ -1,5 +1,5 @@
 {
-  "_comment": "Historical reference only. This is the real configuration this tool was originally built and manually validated against (see PROJECT_AUDIT.md and ENGINEERING_REPORT.md) — a 565-page, ~25,900-link crawl of Eggplant Software's public documentation. It is NOT the default config and is not run by any npm script. Eggplant Software / docs.eggplantsoftware.com has no special handling anywhere in the codebase; this file is just one example of a target definition. Do not run this against the live site repeatedly — it is a real third-party server.",
+  "_comment": "Historical reference only. This is the real configuration this tool was originally built and manually validated against (see docs/PROJECT_AUDIT.md and docs/ENGINEERING_REPORT.md) — a 565-page, ~25,900-link crawl of Eggplant Software's public documentation. It is NOT the default config and is not run by any npm script. Eggplant Software / docs.eggplantsoftware.com has no special handling anywhere in the codebase; this file is just one example of a target definition. Do not run this against the live site repeatedly — it is a real third-party server.",
 
   "target": {
     "name": "Eggplant Software Documentation (historical)",

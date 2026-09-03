@@ -38,7 +38,7 @@ class PageCrawler {
 
       // Soft-404 status of the *page currently being crawled*. This is
       // page-level metadata, not attached to every outbound link on the
-      // page — see PageCrawler return value / ENGINEERING_REPORT.md for why.
+      // page — see PageCrawler return value / docs/ENGINEERING_REPORT.md for why.
       const pageIsSoft404 = this.config.validateSoft404 !== false
         ? Soft404Detector.detect(content, this.config.soft404Keywords || [])
         : false;
@@ -109,7 +109,7 @@ class PageCrawler {
             // on the page (as this previously did) meant a page with, say,
             // 20 console errors and 50 links wrote that same array 50
             // times. A count is enough signal per link; see
-            // FINAL_HARDENING_REPORT.md.
+            // docs/FINAL_HARDENING_REPORT.md.
             pageConsoleErrorCount: consoleErrors.length,
             browserValidation: null,
             validationMethod: 'none',

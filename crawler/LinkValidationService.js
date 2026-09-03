@@ -23,7 +23,7 @@ function isTransientResult(result) {
  * across an entire crawl (not recreated per page) so the underlying HTTPS
  * agent and concurrency limiter are reused.
  *
- * Escalation policy (see PROJECT_AUDIT.md / ENGINEERING_REPORT.md for the
+ * Escalation policy (see docs/PROJECT_AUDIT.md / docs/ENGINEERING_REPORT.md for the
  * reasoning): browser validation is expensive, so it only runs when ALL of
  * the following hold —
  *   - config.validateBrowserFallback is enabled
