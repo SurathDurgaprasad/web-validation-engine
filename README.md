@@ -65,7 +65,7 @@ One `CrawlManager` per run owns a `BrowserManager` (a single shared Playwright b
 ## Quick Start
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/SurathDurgaprasad/web-validation-engine.git
 cd web-validation-engine
 npm install
 npx playwright install chromium
