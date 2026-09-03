@@ -320,3 +320,7 @@ READY FOR BASELINE COMMIT
 ```
 
 Reasoning: every bug found this pass has a shipped fix; the two mandated regression areas plus a full real-pipeline E2E test are in place and passing; report output was audited and no reporter path can render `not_checked` or `error` as `OK`; configuration is validated early with actionable errors instead of silently normalizing anything dangerous; the CLI supports explicit target selection through the same validated path as the config file; the dependency set is confirmed minimal and used; and the README no longer claims capabilities (screenshots) the tool doesn't have. The test suite passes cleanly (104/104) from a fresh `npm install`, and a live, bounded smoke test against a safe public target produced genuine, non-hard-coded validation results. The limitations in §11 are real but are documented scope boundaries, not defects masquerading as done.
+
+### Git Status
+
+This repository had no `.git` directory at the start of this session (consistent with `PROJECT_AUDIT.md`'s original finding). As the final step of this pass, `git init` was run and every file except the `.gitignore`-excluded directories (`node_modules/`, `output/`, `state/`, `logs/`, `screenshots/`) was committed as a single initial baseline commit. `git status` now reports a clean working tree with one commit on `master`.
