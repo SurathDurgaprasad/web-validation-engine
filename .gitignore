@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Crawl output — reports, NDJSON, per-run artifacts (can be large; see
+# ENGINEERING_REPORT.md for the known output-size scalability issue)
+output/
+
+# Crawl state (visited-URL set, used for resumePreviousCrawl)
+state/
+
+# Logs
+logs/
+
+# Screenshots (feature reserved for a future enhancement — see ENGINEERING_REPORT.md)
+screenshots/
+
+# Environment / secrets
+.env
+.env.*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

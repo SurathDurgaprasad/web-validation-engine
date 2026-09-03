@@ -1,0 +1,52 @@
+{
+  "_comment": "Historical reference only. This is the real configuration this tool was originally built and manually validated against (see PROJECT_AUDIT.md and ENGINEERING_REPORT.md) — a 565-page, ~25,900-link crawl of Eggplant Software's public documentation. It is NOT the default config and is not run by any npm script. Eggplant Software / docs.eggplantsoftware.com has no special handling anywhere in the codebase; this file is just one example of a target definition. Do not run this against the live site repeatedly — it is a real third-party server.",
+
+  "target": {
+    "name": "Eggplant Software Documentation (historical)",
+    "baseUrl": "https://docs.eggplantsoftware.com/epf/",
+    "environment": "public",
+    "seedUrls": [
+      "https://docs.eggplantsoftware.com/epf/",
+      "https://docs.eggplantsoftware.com/dai/",
+      "https://docs.eggplantsoftware.com/epf/stk-sensetalk-reference/",
+      "https://docs.eggplantsoftware.com/es/"
+    ]
+  },
+
+  "crawl": {
+    "maxDepth": 4,
+    "maxPages": 5000,
+    "maxLinksPerPage": 500,
+    "concurrency": 3,
+    "crawlDelayMs": 500,
+    "respectRobotsTxt": true,
+    "followSitemaps": true,
+    "captureScreenshots": false
+  },
+
+  "validation": {
+    "http": true,
+    "browserFallback": true,
+    "anchors": true,
+    "soft404": true,
+    "retry": true,
+    "retryCount": 3,
+    "concurrency": 5
+  },
+
+  "scope": {
+    "allowedDomains": ["docs.eggplantsoftware.com"],
+    "excludedPaths": ["/search", "/login"]
+  },
+
+  "reporting": {
+    "html": true,
+    "excel": true,
+    "json": true
+  },
+
+  "outputDirectory": "./output",
+  "screenshotDirectory": "./screenshots",
+  "stateDirectory": "./state",
+  "resumePreviousCrawl": false
+}

@@ -1,0 +1,43 @@
+{
+  "target": {
+    "name": "Example Target",
+    "baseUrl": "https://example.com/",
+    "environment": "public"
+  },
+
+  "crawl": {
+    "maxDepth": 1,
+    "maxPages": 5,
+    "concurrency": 2,
+    "crawlDelayMs": 500,
+    "respectRobotsTxt": true,
+    "followSitemaps": true,
+    "captureScreenshots": false
+  },
+
+  "validation": {
+    "http": true,
+    "browserFallback": true,
+    "anchors": true,
+    "soft404": true,
+    "retry": true,
+    "retryCount": 3,
+    "concurrency": 5
+  },
+
+  "scope": {
+    "allowedDomains": [],
+    "excludedPaths": ["/search", "/login"]
+  },
+
+  "reporting": {
+    "html": true,
+    "excel": true,
+    "json": true
+  },
+
+  "outputDirectory": "./output",
+  "screenshotDirectory": "./screenshots",
+  "stateDirectory": "./state",
+  "resumePreviousCrawl": false
+}

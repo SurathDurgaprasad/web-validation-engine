@@ -1,0 +1,45 @@
+{
+  "_comment": "Template for pointing this tool at an internal (non-public) target — staging, UAT, QA, or an internal tool. environment is metadata only: it is never branched on by the crawl/validation engine, it just gets stamped into run-manifest.json and the reports so results from different environments aren't mixed up. Network reachability of internalStagingApp.example.corp is entirely the runtime environment's responsibility (VPN, internal DNS, etc.) — this tool does not manage that.",
+
+  "target": {
+    "name": "Internal Staging App",
+    "baseUrl": "https://staging.internal-app.example.corp/",
+    "environment": "staging"
+  },
+
+  "crawl": {
+    "maxDepth": 3,
+    "maxPages": 200,
+    "concurrency": 3,
+    "crawlDelayMs": 300,
+    "respectRobotsTxt": false,
+    "followSitemaps": true,
+    "captureScreenshots": false
+  },
+
+  "validation": {
+    "http": true,
+    "browserFallback": true,
+    "anchors": true,
+    "soft404": true,
+    "retry": true,
+    "retryCount": 3,
+    "concurrency": 4
+  },
+
+  "scope": {
+    "allowedDomains": ["staging.internal-app.example.corp"],
+    "excludedPaths": ["/logout", "/admin/danger-zone"]
+  },
+
+  "reporting": {
+    "html": true,
+    "excel": true,
+    "json": true
+  },
+
+  "outputDirectory": "./output",
+  "screenshotDirectory": "./screenshots",
+  "stateDirectory": "./state",
+  "resumePreviousCrawl": false
+}

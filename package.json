@@ -1,0 +1,25 @@
+{
+  "name": "enterprise-doc-validator",
+  "version": "2.0.0",
+  "description": "Generic enterprise web/application crawler and link validation platform",
+  "main": "crawler.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "crawl": "node crawler.js",
+    "crawl:config": "node crawler.js --config=config/config.json",
+    "crawl:example:eggplant": "node crawler.js --config=config/examples/eggplant-docs.historical.config.json",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "commander": "^13.1.0",
+    "exceljs": "^4.4.0",
+    "fs-extra": "^11.3.0",
+    "p-limit": "^6.2.0",
+    "playwright": "^1.52.0",
+    "winston": "^3.17.0",
+    "xml2js": "^0.6.2"
+  }
+}
